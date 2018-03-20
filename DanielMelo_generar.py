@@ -22,6 +22,8 @@ def sample_2(N):
 
 def get_mean(sampling_fun, N, M):
 
+    #mi array de promedios
+
     A = np.zeros(M)
 
     for i in range(M):
@@ -34,12 +36,12 @@ def get_mean(sampling_fun, N, M):
 
 for i in range(6):
 
-    if(i <=2):
+    if(i <=2):#los primeros tres archivos
 
         np.savetxt("sample_1_" + str(10**(i+1)) + ".txt", get_mean(sample_1, 10**(i+1), 10000))
 
 
-    else:
+    else:# Los demas archivos
 
         np.savetxt("sample_2_" + str(10**(i-2)) + ".txt", get_mean(sample_1, 10**(i-2), 10000))
 
