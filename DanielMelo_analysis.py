@@ -24,7 +24,7 @@ def get_fit(filename):
 
     q, w = scipy.optimize.curve_fit(normal_dist, y, x)
 
-    print "El ajuste de prom es " + str(q) + " y el ajuste de sigma es " + w
+    print "El ajuste de prom es " + str(q[0]) + " y el ajuste de sigma es " + w[0]
 
 
 
