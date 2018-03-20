@@ -6,7 +6,11 @@ import scipy
 
 def normal_dist(x, mean, sigma):
 
+    #La constante de normalizacion
+
     a = math.sqrt(1/(2*np.pi*sigma*sigma))
+
+    # el exponente de la gaussiana
 
     b = ((x - mean)**2)
 
@@ -21,6 +25,8 @@ def get_fit(filename):
     y = freqs
 
     x = 0.5*(bins[:-1] + bins[1:])
+
+    #q son mis parametros optimizados
 
     q, w = scipy.optimize.curve_fit(normal_dist, y, x)
 

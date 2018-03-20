@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 
 def sample_1(N):
 
+    
+
 
     P = np.array([0.1, 0.4, 0.2, 0.3], float)
 
